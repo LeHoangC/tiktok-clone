@@ -1,0 +1,65 @@
+.wrapper {
+	height: var(--Default-layout-header-height);
+	box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
+	display: flex;
+	justify-content: center;
+}
+
+.inner {
+	width: var(--Default-layout-width);
+	padding: 0 var(--Default-layout-horizontal-spacer);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+// Action
+
+.actions {
+	display: flex;
+	align-items: center;
+}
+
+.action-btn {
+	position: relative;
+	padding: 4px 8px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.badge {
+	position: absolute;
+	top: -3px;
+	right: 0px;
+	padding: 0px 6px;
+	height: 2rem;
+	line-height: 2rem;
+	border-radius: 10px;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: var(--white);
+	font-family: 'ProximaNova', sans-serif;
+	background-color: var(--primary);
+}
+
+.more-btn {
+	font-size: 2rem;
+	margin-left: 28px;
+	padding: 12px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.user-avatar {
+	width: 32px;
+	height: 32px;
+	margin-left: 8px;
+	object-fit: cover;
+	border-radius: 50%;
+}
