@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Tippy from '@tippyjs/react/headless'
 import classNames from 'classnames/bind'
 import styles from './Menu.module.scss'
@@ -36,10 +37,10 @@ function Menu({ children, items, onChange = defaultFn }) {
 
     return (
         <Tippy
+            hideOnClick={false}
             delay={[0, 500]}
             offset={[16, 8]}
             interactive
-            hideOnClick={false}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
@@ -52,7 +53,7 @@ function Menu({ children, items, onChange = defaultFn }) {
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}
@@ -61,6 +62,12 @@ function Menu({ children, items, onChange = defaultFn }) {
             {children}
         </Tippy>
     )
+}
+
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+    onChange: PropTypes.func,
 }
 
 export default Menu
